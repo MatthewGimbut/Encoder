@@ -44,7 +44,7 @@
             // 
             // encode
             // 
-            this.encode.Location = new System.Drawing.Point(257, 359);
+            this.encode.Location = new System.Drawing.Point(256, 176);
             this.encode.Name = "encode";
             this.encode.Size = new System.Drawing.Size(75, 23);
             this.encode.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // decode
             // 
-            this.decode.Location = new System.Drawing.Point(257, 388);
+            this.decode.Location = new System.Drawing.Point(256, 205);
             this.decode.Name = "decode";
             this.decode.Size = new System.Drawing.Size(75, 23);
             this.decode.TabIndex = 2;
