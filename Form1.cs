@@ -16,19 +16,20 @@ namespace Encoder {
 
         private void encode_Click(object sender, EventArgs e) {
             string input = toBinary(Encoding.ASCII.GetBytes(toEncode.Text));
-            input = input.Replace("0", "a");
-            input = input.Replace("1", "h");
+            input = input.Replace("0", "l");
+            input = input.Replace("1", "I");
+            toEncode.Text = "";
             toDecode.Text = input;
         }
 
         private void decode_Click(object sender, EventArgs e) {
-            string binaryString = toDecode.Text.Replace("a", "0");
-            binaryString = binaryString.Replace("h", "1");
+            string binaryString = toDecode.Text.Replace("l", "0");
+            binaryString = binaryString.Replace("I", "1");
             binaryString = binaryString.Replace(" ", "");
             string dataTest = binaryToString(binaryString);
 
             toEncode.Text = dataTest;
-
+            toDecode.Text = "";
         }
 
         public static String toBinary(Byte[] data)
@@ -38,11 +39,9 @@ namespace Encoder {
 
         public string binaryToString(string binary)
         {
-            if (string.IsNullOrEmpty(binary))
-                throw new ArgumentNullException("binary");
 
             if ((binary.Length % 8) != 0)
-                throw new ArgumentException("Binary string invalid (must divide by 8)", "binary");
+                throw new ArgumentException("Binary string must be divisible by 8", "binary");
 
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < binary.Length; i += 8)
@@ -61,6 +60,5 @@ namespace Encoder {
             }
             return builder.ToString();
         }
-
     }
 }
