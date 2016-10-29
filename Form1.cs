@@ -15,29 +15,47 @@ namespace Encoder {
         }
 
         private void encode_Click(object sender, EventArgs e) {
-            string input = toBinary(Encoding.ASCII.GetBytes(toEncode.Text));
-            input = input.Replace("0", "l");
-            input = input.Replace("1", "I");
+            string input = ToBinary(Encoding.ASCII.GetBytes(toEncode.Text));
+            string ZeroReplacement = ReplaceZero.Text;
+            string OneReplacement = ReplaceOne.Text;
+
+            if (ZeroReplacement == "") input = input.Replace("0", "l");
+            else input = input.Replace("0", ZeroReplacement);
+            
+
+            if (OneReplacement == "") input = input.Replace("1", "I");
+            else input = input.Replace("1", OneReplacement);
+            
+
             toEncode.Text = "";
             toDecode.Text = input;
         }
 
         private void decode_Click(object sender, EventArgs e) {
-            string binaryString = toDecode.Text.Replace("l", "0");
-            binaryString = binaryString.Replace("I", "1");
-            binaryString = binaryString.Replace(" ", "");
-            string dataTest = binaryToString(binaryString);
+            string BinaryString = toDecode.Text;
+            string ZeroReplacement = ReplaceZero.Text;
+            string OneReplacement = ReplaceOne.Text;
+
+            if (ZeroReplacement == "") BinaryString = BinaryString.Replace("l", "0");
+            else BinaryString = BinaryString.Replace(ZeroReplacement, "0");
+
+
+            if (OneReplacement == "") BinaryString = BinaryString.Replace("I", "1");
+            else BinaryString = BinaryString.Replace(OneReplacement, "1");
+
+            BinaryString = BinaryString.Replace(" ", "");
+            string dataTest = BinaryToString(BinaryString);
 
             toEncode.Text = dataTest;
             toDecode.Text = "";
         }
 
-        public static String toBinary(Byte[] data)
+        public static String ToBinary(Byte[] data)
         {
             return string.Join(" ", data.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
         }
 
-        public string binaryToString(string binary)
+        public string BinaryToString(string binary)
         {
 
             if ((binary.Length % 8) != 0)
@@ -60,5 +78,7 @@ namespace Encoder {
             }
             return builder.ToString();
         }
+
+
     }
 }
