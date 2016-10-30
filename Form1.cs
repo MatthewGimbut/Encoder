@@ -103,7 +103,7 @@ namespace Encoder {
             }
             catch (Exception ex)
             {
-                MessageBox.Show("err: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
