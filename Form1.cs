@@ -76,7 +76,7 @@ namespace Encoder {
                 {
                     throw new ArgumentException("Binary string contains invalid section: " + section, "binary");
                 }
-                builder.Append((char)ascii);
+                builder.Append((char) ascii);
             }
             return builder.ToString();
         }
@@ -105,6 +105,11 @@ namespace Encoder {
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -220,6 +220,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "main";
             this.Text = "Encoder";
+            this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
