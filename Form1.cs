@@ -97,7 +97,7 @@ namespace Encoder {
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("csharpmessageencoder@gmail.com", "MessageEncoder1");
+                smtp.Credentials = new NetworkCredential("csharpmessageencoder@gmail.com", "Encoder1");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
             }
