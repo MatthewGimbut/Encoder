@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ReplaceOne = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.email = new System.Windows.Forms.Button();
             this.to = new System.Windows.Forms.TextBox();
@@ -47,9 +46,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CaeserOption = new System.Windows.Forms.RadioButton();
             this.VigenereOption = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.PlainBinaryOption = new System.Windows.Forms.RadioButton();
+            this.CaesarKey = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CaesarKey)).BeginInit();
             this.SuspendLayout();
             // 
             // toEncode
@@ -132,21 +134,12 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Replacement for 1s:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 521);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "If no text is entered, 0s and 1s default to l and I.";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -8);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(599, 607);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(599, 607);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(599, 607);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,10 +199,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.PlainBinaryOption);
             this.groupBox1.Controls.Add(this.VigenereOption);
             this.groupBox1.Controls.Add(this.CaeserOption);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 419);
             this.groupBox1.Name = "groupBox1";
@@ -228,7 +221,6 @@
             this.CaeserOption.Name = "CaeserOption";
             this.CaeserOption.Size = new System.Drawing.Size(58, 17);
             this.CaeserOption.TabIndex = 0;
-            this.CaeserOption.TabStop = true;
             this.CaeserOption.Text = "Caeser";
             this.CaeserOption.UseVisualStyleBackColor = false;
             // 
@@ -241,34 +233,71 @@
             this.VigenereOption.Name = "VigenereOption";
             this.VigenereOption.Size = new System.Drawing.Size(70, 17);
             this.VigenereOption.TabIndex = 1;
-            this.VigenereOption.TabStop = true;
             this.VigenereOption.Text = "Vigenère ";
             this.VigenereOption.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // PlainBinaryOption
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 67);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Plain Binary";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.PlainBinaryOption.AutoSize = true;
+            this.PlainBinaryOption.Checked = true;
+            this.PlainBinaryOption.Location = new System.Drawing.Point(6, 67);
+            this.PlainBinaryOption.Name = "PlainBinaryOption";
+            this.PlainBinaryOption.Size = new System.Drawing.Size(80, 17);
+            this.PlainBinaryOption.TabIndex = 2;
+            this.PlainBinaryOption.TabStop = true;
+            this.PlainBinaryOption.Text = "Plain Binary";
+            this.PlainBinaryOption.UseVisualStyleBackColor = true;
+            // 
+            // CaesarKey
+            // 
+            this.CaesarKey.BackColor = System.Drawing.Color.DimGray;
+            this.CaesarKey.ForeColor = System.Drawing.Color.White;
+            this.CaesarKey.Location = new System.Drawing.Point(387, 439);
+            this.CaesarKey.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.CaesarKey.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CaesarKey.Name = "CaesarKey";
+            this.CaesarKey.ReadOnly = true;
+            this.CaesarKey.Size = new System.Drawing.Size(188, 20);
+            this.CaesarKey.TabIndex = 18;
+            this.CaesarKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CaesarKey.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(318, 441);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Caesar key:";
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 593);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.CaesarKey);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.subject);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.to);
             this.Controls.Add(this.email);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ReplaceOne);
             this.Controls.Add(this.label1);
@@ -283,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CaesarKey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +328,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ReplaceOne;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button email;
         private System.Windows.Forms.TextBox to;
@@ -308,7 +337,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton VigenereOption;
         private System.Windows.Forms.RadioButton CaeserOption;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton PlainBinaryOption;
+        private System.Windows.Forms.NumericUpDown CaesarKey;
+        private System.Windows.Forms.Label label5;
     }
 }
 
