@@ -9,31 +9,30 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Encoder.Utilities;
 
-namespace Encoder {
-    public partial class main : Form {
-        public main() {
+namespace Encoder
+{
+    public partial class main : Form
+    {
+
+        public main()
+        {
             InitializeComponent();
         }
 
-        private void encode_Click(object sender, EventArgs e) {
-            string input = ToBinary(Encoding.ASCII.GetBytes(toEncode.Text));
-            string ZeroReplacement = ReplaceZero.Text;
-            string OneReplacement = ReplaceOne.Text;
-
-            if (ZeroReplacement == "") input = input.Replace("0", "l");
-            else input = input.Replace("0", ZeroReplacement);
-            
-
-            if (OneReplacement == "") input = input.Replace("1", "I");
-            else input = input.Replace("1", OneReplacement);
-            
-
+        private void encode_Click(object sender, EventArgs e)
+        {
             toEncode.Text = "";
-            toDecode.Text = input;
+            toDecode.Text = EncoderUtils.BinaryEncode(
+                ToBinary(Encoding.ASCII.GetBytes(toEncode.Text)),
+                ReplaceZero.Text,
+                ReplaceOne.Text
+                );
         }
 
-        private void decode_Click(object sender, EventArgs e) {
+        private void decode_Click(object sender, EventArgs e)
+        {
             string BinaryString = toDecode.Text;
             string ZeroReplacement = ReplaceZero.Text;
             string OneReplacement = ReplaceOne.Text;
@@ -106,11 +105,5 @@ namespace Encoder {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void main_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

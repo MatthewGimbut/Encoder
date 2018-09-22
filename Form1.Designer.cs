@@ -91,7 +91,7 @@
             // 
             this.ReplaceZero.BackColor = System.Drawing.Color.DimGray;
             this.ReplaceZero.ForeColor = System.Drawing.Color.White;
-            this.ReplaceZero.Location = new System.Drawing.Point(113, 438);
+            this.ReplaceZero.Location = new System.Drawing.Point(113, 537);
             this.ReplaceZero.Name = "ReplaceZero";
             this.ReplaceZero.Size = new System.Drawing.Size(130, 20);
             this.ReplaceZero.TabIndex = 4;
@@ -101,7 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 441);
+            this.label1.Location = new System.Drawing.Point(9, 540);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.ReplaceOne.BackColor = System.Drawing.Color.DimGray;
             this.ReplaceOne.ForeColor = System.Drawing.Color.White;
-            this.ReplaceOne.Location = new System.Drawing.Point(113, 465);
+            this.ReplaceOne.Location = new System.Drawing.Point(113, 564);
             this.ReplaceOne.Name = "ReplaceOne";
             this.ReplaceOne.Size = new System.Drawing.Size(130, 20);
             this.ReplaceOne.TabIndex = 6;
@@ -121,7 +121,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 468);
+            this.label2.Location = new System.Drawing.Point(9, 567);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 7;
@@ -132,7 +132,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 422);
+            this.label3.Location = new System.Drawing.Point(9, 521);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 13);
             this.label3.TabIndex = 8;
@@ -143,16 +143,16 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(599, 516);
+            this.pictureBox1.Size = new System.Drawing.Size(599, 607);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(256, 234);
+            this.email.Location = new System.Drawing.Point(338, 564);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(75, 23);
+            this.email.Size = new System.Drawing.Size(238, 23);
             this.email.TabIndex = 10;
             this.email.Text = "Send Email";
             this.email.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             // 
             this.to.BackColor = System.Drawing.Color.DimGray;
             this.to.ForeColor = System.Drawing.Color.White;
-            this.to.Location = new System.Drawing.Point(387, 433);
+            this.to.Location = new System.Drawing.Point(387, 512);
             this.to.Name = "to";
             this.to.Size = new System.Drawing.Size(189, 20);
             this.to.TabIndex = 11;
@@ -172,7 +172,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(335, 438);
+            this.label4.Location = new System.Drawing.Point(335, 517);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 12;
@@ -182,7 +182,7 @@
             // 
             this.subject.BackColor = System.Drawing.Color.DimGray;
             this.subject.ForeColor = System.Drawing.Color.White;
-            this.subject.Location = new System.Drawing.Point(387, 459);
+            this.subject.Location = new System.Drawing.Point(387, 538);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(189, 20);
             this.subject.TabIndex = 15;
@@ -192,7 +192,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(335, 462);
+            this.label6.Location = new System.Drawing.Point(335, 541);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 16;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 500);
+            this.ClientSize = new System.Drawing.Size(590, 593);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.subject);
             this.Controls.Add(this.label4);
@@ -220,7 +220,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "main";
             this.Text = "Encoder";
-            this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

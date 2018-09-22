@@ -1,9 +1,0 @@
-E:\Programming stuff\Encoder\Encoder\bin\Debug\Encoder.exe.config
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.csprojResolveAssemblyReference.cache
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.main.resources
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.Properties.Resources.resources
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.csproj.GenerateResource.Cache
-E:\Programming stuff\Encoder\Encoder\bin\Debug\Encoder.exe
-E:\Programming stuff\Encoder\Encoder\bin\Debug\Encoder.pdb
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.exe
-E:\Programming stuff\Encoder\Encoder\obj\Debug\Encoder.pdb
