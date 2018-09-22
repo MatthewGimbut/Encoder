@@ -13,12 +13,31 @@ namespace Encoder.Utilities
             return input.Replace("0", zeroReplacement).Replace("1", oneReplacement);
         }
 
-        public static void BinaryDecode(string input, string zeroReplacement, string oneReplacement)
+        public static string BinaryDecode(string input, string zeroReplacement, string oneReplacement)
         {
-
+            return BinaryToString(input
+                .Replace(zeroReplacement, "0")
+                .Replace(oneReplacement, "1")
+                .Replace(" ", "")
+                );
         }
 
-        private string BinaryToString(string binary)
+        public static string ToBinary(Byte[] convert)
+        {
+            return string.Join(" ", convert.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
+        }
+
+        public static string CaeserEncode(string input)
+        {
+            return "";
+        }
+
+        public static string VigenereEncode(string input)
+        {
+            return "";
+        }
+
+        private static string BinaryToString(string binary)
         {
             if ((binary.Length % 8) != 0)
                 throw new ArgumentException("String must be divisible by 8!", "binary");
